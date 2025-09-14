@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-// In-memory storage for todos (in production, use a database)
+// In-memory storage for todos (in production, use a database, its just a sample)
 let todos = [];
 let nextId = 1;
 
