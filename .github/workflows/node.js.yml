@@ -42,6 +42,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - run: docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
       - run: |
-          docker run -d -p 8080:8080 --name myapp ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+          docker run -d -p 3000:3000 --name myapp ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
           sleep 5
-          curl -I http://localhost:8080 || (docker logs myapp && exit 1)
+          curl -I http://localhost:3000 || (docker logs myapp && exit 1)
