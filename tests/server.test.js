@@ -17,7 +17,7 @@ describe('Todo API', () => {
     expect(response.body).toEqual([]);
   });
 
-  // Test POST /api/todos (Add a new todo)
+  // Test POST /api/todos (Add a new todo to the list)
   it('should create a new todo', async () => {
     const newTodo = { text: 'Buy milk' };
     const response = await request(app).post('/api/todos').send(newTodo);
