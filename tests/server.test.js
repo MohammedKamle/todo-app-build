@@ -28,7 +28,7 @@ describe('Todo API', () => {
     expect(response.body.completed).toBe(false);
   });
 
-  // Test POST /api/todos with invalid data
+  // Test POST /api/todos with invalid data in the field
   it('should return an error if text is not provided', async () => {
     const response = await request(app).post('/api/todos').send({});
 
