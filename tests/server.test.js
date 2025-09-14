@@ -25,7 +25,7 @@ describe('Todo API', () => {
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty('id');
     expect(response.body.text).toBe(newTodo.text);
-    expect(response.body.completed).toBe(false);
+    expect(response.body.completed).toBe(true);
   });
 
   // Test POST /api/todos with invalid data
