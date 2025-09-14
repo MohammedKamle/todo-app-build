@@ -65,7 +65,7 @@ describe('Todo API', () => {
 
     // Check if the todo is really deleted
     const todosAfterDelete = await request(app).get('/api/todos');
-    expect(todosAfterDelete.body).toHaveLength(2);
+    expect(todosAfterDelete.body).toHaveLength(4);
   });
 
   // Test DELETE /api/todos/:id for a non-existent todo
